@@ -24,7 +24,7 @@ $(document).ready(function(){
       })
     ;
     
-    $("#form").submit(function(e){
+    $(".form").submit(function(e){
         e.preventDefault();
         window.location.reload();
     });
