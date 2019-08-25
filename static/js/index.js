@@ -7,4 +7,41 @@ $(document).ready(function(){
           
         
     });
+    
+        /*checkbox*/
+    $('.checkbox')
+      .checkbox()
+      .first().checkbox({
+        onChecked: function() {
+            $('#securemethodfield').css('display','block');
+            //console.log('onChecked called<br>');
+            
+        },
+        onUnchecked: function() {
+            $('#securemethodfield').css('display','none');
+            //console.log('onUnchecked called<br>');
+        }
+      })
+    ;
+    
+    
+    $('#exercise').click(function(){
+        alert('fuck');
+
+    });
+    $('#lightbulb-img').click(function(){
+        name = $(this).attr('src')
+        if(name == 'images/lightbulb/close.jpg'){
+            $(this).attr('src', 'images/lightbulb/light.jpg');
+            $(this).attr('height', '300');
+            $('#lightbulb-title').text('ON');
+        }
+        else if(name == 'images/lightbulb/light.jpg'){
+            $(this).attr('src', 'images/lightbulb/close.jpg');
+            $(this).attr('height', '300');
+            $('#lightbulb-title').text('OFF');
+        }
+
+    });
+    
 });

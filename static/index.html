@@ -45,9 +45,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     
     
         <div class="ui sidebar inverted vertical menu">
-            <div id="sidebarhead">
-            
-            </div>
 
             <a class="sideitem item" id="updateDashboard">
                 <i  class="fas fa-tachometer-alt fa-2x" style="font-size:2rem;"><div style="float:right;margin-left:2rem;font-size:1.2rem;text-align:center;font-family: sans-serif;padding-top:0.5rem;">Dashboard </div></i>
@@ -106,10 +103,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             justify-content: center;">
                                 
                                 <button class="ui blue  small button">
-                                    <i class="edit icon"></i>Edit
+                                     <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#small-dialog">Edit</a>
                                 </button>
                                 <button class="ui green small button">
-                                    <i class="chart pie icon"></i>Show
+                                    <i class="chart pie icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#show-cushion">Show</a>
                                 </button>
                             </div>
                              
@@ -147,18 +144,46 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             justify-content: center;">
                                 
                                 <button class="ui blue  small button">
-                                    <i class="edit icon"></i>Edit
+                                    <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#small-dialog">Edit</a>
                                     
                                 </button>
                                 <button class="ui green small button">
-                                    <i class="chart pie icon"></i>Show
+                                    <i class="chart pie icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#show-lightbulb">Show</a>
                                 </button>
                             </div>
                         </div>
                       </div>
                     </div>
                     
-                
+                    <div class="ui cards agileits-pricing-grid" style="width:18rem">
+                      <div class="card" style="width:18rem">
+                        <div class="image">
+                          <img src="images/doorbell.jpg">
+                        </div>
+                        <div class="content">
+                          <div class="header">Doorbell</div>
+                          <div class="meta">
+                            <a>smart AIOT</a>
+                          </div>
+                          <div class="description">
+                           If someone rings the bell,we will remind you.
+                          </div>
+                        </div>
+                        <div class="extra content">
+                          <div class="ui buttons" style=" display: flex;
+                            justify-content: center;">
+                                
+                                <button class="ui blue  small button">
+                                    <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#small-dialog">Edit</a>
+                                    
+                                </button>
+                                <button class="ui green small button">
+                                    <i class="chart pie icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#show-doorbell">Show</a>
+                                </button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                     <!--
 					<div class="agileits-pricing-grid first">
 						<div class="pricing_grid">
@@ -215,22 +240,71 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div id="popup">
 		<div id="small-dialog" class="mfp-hide">
 			<div class="signin-form profile">
-				<h3>Register Here</h3>
+				<h3>Edit</h3>
 				<div class="login-form">
 					<form action="#" method="post">
-						<input type="text" name="name" placeholder="Username" required="">
-						<input type="email" name="email" placeholder="E-mail" required="">
-						<input type="text" name="Number" placeholder="Contact Number" required="">
-						<input type="password" name="password" placeholder="Password" required="">
-						<input type="password" name="password" placeholder="Confirm Password" required="">
-						<input type="submit" value="Submit">
+						<input type="text" name="deviceId" placeholder="Device name" required="" value="iot-7531">
+                        <input type="text" name="sensorId" placeholder="Device name" required="" value="68888">
+                        <input type="text" name="key" placeholder="Device name" required="" value="ERG7-SDF5-65FS-9S5F">
+						<input type="text" name="url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
+                        <div class="ui toggle checkbox">
+                          <input type="checkbox" name="public">
+                          <label class="coloring red" style="color:black">Always remind me</label>
+                        </div>
+						<input type="submit" value="Save">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>						
 	<!--pop-up-grid-->
-
+    <div id="popup">
+		<div id="show-cushion" class="mfp-hide">
+			<div class="signin-form profile">
+				<h3>SMART CUSHION</h3>
+				<div class="login-form">
+					<form action="#" method="post">
+                        <label style="color:black">Your Posture</label>
+                        <h1 style="font-size:2rem;font-family:sans-serif;" id="postrue-title">駝背前傾</h1>
+                        <img src="images/posture/1.jpg">
+						<input type="submit" value="Exercise" id="exercise">
+                        <input type="submit" value="Close">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>		
+    
+    <div id="popup">
+		<div id="show-lightbulb" class="mfp-hide">
+			<div class="signin-form profile">
+				<h3>LIGHT BULB</h3>
+				<div class="login-form">
+					<form action="#" method="post">
+                          <label style="color:black">Power</label>
+                        <h1 style="font-size:2rem;font-family:sans-serif;" id="lightbulb-title">OFF</h1>
+                        <img id="lightbulb-img" src="images/lightbulb/close.jpg" height="300">
+                        <input type="submit" value="Close">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+    
+        <div id="popup">
+		<div id="show-doorbell" class="mfp-hide">
+			<div class="signin-form profile">
+				<h3>DOOR BELL</h3>
+				<div class="login-form">
+					<form action="#" method="post">
+                        <label style="color:black">Status</label>
+                        <h1 style="font-size:4rem;font-family:sans-serif;" id="postrue-title">NO ONE</h1>
+                        <input type="submit" value="Close">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
 	<!-- jquery -->
 	<script src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
