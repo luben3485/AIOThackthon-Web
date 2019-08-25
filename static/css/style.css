@@ -656,11 +656,25 @@ button::-moz-focus-inner {
 	}
 }
 @media(max-width: 600px){
+    body.pushable>.pusher {
+  font-family: 'Raleway', sans-serif;
+    background: #1b1b1b;
+	background: url("../images/1.jpg")  0px 0px;
+	background-size: cover !important;
+    background-attachment:fixed;
+}
 	.agileits-pricing-grid {
 		width: 45%;
 	}
 }
 @media(max-width: 480px){
+    body.pushable>.pusher {
+  font-family: 'Raleway', sans-serif;
+    background: #1b1b1b;
+	background: url("../images/1.jpg")  0px 0px;
+	background-size: cover !important;
+    background-attachment:fixed;
+}
 	.pricing-bottom-bottom {
 		padding: 2em 1em;
 	}
@@ -673,6 +687,13 @@ button::-moz-focus-inner {
 	}
 }
 @media(max-width: 414px){
+    body.pushable>.pusher {
+  font-family: 'Raleway', sans-serif;
+    background: #1b1b1b;
+	background: url("../images/1.jpg")  0px 0px;
+	background-size: cover !important;
+    background-attachment:fixed;
+}
 	.agileits-pricing-grid {
 		width: 65%;
 	}
@@ -682,6 +703,13 @@ button::-moz-focus-inner {
 	}
 }
 @media(max-width: 384px){
+    body.pushable>.pusher {
+  font-family: 'Raleway', sans-serif;
+    background: #1b1b1b;
+	background: url("../images/1.jpg")  0px 0px;
+	background-size: cover !important;
+    background-attachment:fixed;
+}
 	.agileits-pricing-grid {
 		width: 70%;
 	}
@@ -694,6 +722,13 @@ button::-moz-focus-inner {
 	}
 }
 @media(max-width: 320px){
+    body.pushable>.pusher {
+  font-family: 'Raleway', sans-serif;
+    background: #1b1b1b;
+	background: url("../images/1.jpg")  0px 0px;
+	background-size: cover !important;
+    background-attachment:fixed;
+}
 	.agileits-pricing-grid,.signin-form h3 {
 		width: 80%;
 	}
