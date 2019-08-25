@@ -42,27 +42,50 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	
 </head>
 <body>
+    
+    
+        <div class="ui sidebar inverted vertical menu">
+            <div id="sidebarhead">
+            
+            </div>
+
+            <a class="sideitem item" id="updateDashboard">
+                <i  class="fas fa-tachometer-alt fa-2x" style="font-size:2rem;"><div style="float:right;margin-left:2rem;font-size:1.2rem;text-align:center;font-family: sans-serif;padding-top:0.5rem;">Dashboard </div></i>
+            </a>
+            <a class="sideitem item" id="notification">
+               <i  class="fas fa-envelope fa-2x" style="font-size:2rem;"><div style="float:right;margin-left:2rem;font-size:1.2rem;text-align:center;font-family: sans-serif;padding-top:0.5rem;;">Notification</div></i>
+            </a>
+            <a class="sideitem item" href="doc" target="_blank">
+               <i  class="fas fa-cog fa-2x" style="font-size:2rem;"><div style="float:right;margin-left:2rem;font-size:1.2rem;text-align:center;font-family: sans-serif;padding-top:0.5rem;;">Setting</div></i>
+            </a>
+          </div>
+        <!--pusher-->
+        <div class="pusher">
+        
+        
 		<!--header-->
-		<div class="header-w3l">
+        <div class="sidebar">
+            <a class="item" id="list" style="text-align:left;float:left;color:white;">
+                    <i class="fas fa-bars fa-3x" ></i>  
+            </a>
+		</div>
+        <div class="header-w3l">
+        
 			<h1>AIOT Smart Life+</h1>
 		</div>
 		<!--//header-->
 		<!--main-->
 			<!-- pricing plans -->
-            <!--
-            <div class="width:100%">
-                 <div id="tabledelete" style="margin-bottom:0.5rem;" class="ui right  tiny blue button">
-                    <i class="fas fa-trash-alt"></i>
-                </div>
-                <div id="tabledelete" style="margin-bottom:0.5rem;" class="ui right  tiny red button">
-                    <i class="fas fa-trash-alt"></i>
-                </div>
-            </div>
-            -->
+            
+                
+            
+        
 			<div class="pricing">
-     
-				<div class="w3l-pricing-grids">
-                    
+                
+            
+                
+				<div class="w3l-pricing-grids" style="margin-top:3rem;">
+
                     
                     <div class="ui cards agileits-pricing-grid"  style="width:18rem">
                       <div class="card"  style="width:18rem">
@@ -135,6 +158,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                       </div>
                     </div>
                     
+                
                     <!--
 					<div class="agileits-pricing-grid first">
 						<div class="pricing_grid">
@@ -162,72 +186,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
                     -->
 
-                    <!--
-					<div class="agileits-pricing-grid second">
-						<div class="pricing_grid">
-							<div class="wthree-pricing-info pricing-top blue-top">
-								<h3>Popular</h3>
-								<p>$<span>20</span>/month</p>
-							</div>
-							<div class="pricing-bottom">
-								<div class="pricing-bottom-bottom blue-pricing-bottom-top">
-									<p><span class="fa fa-check"></span><span>Training</span> Overview</p>
-									<p><span class="fa fa-check"></span><span>Beginner </span> Classes</p>
-									<p><span class="fa fa-times"></span><span>Personal </span> Training</p>  
-									<p><span class="fa fa-times"></span><span>Olympic </span> weightlifting</p>
-									<p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p>
-								</div>
-								<div class="buy-button">
-									<a class="popup-with-zoom-anim" href="#small-dialog">Buy Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="agileits-pricing-grid third">
-						<div class="pricing_grid">
-							<div class="wthree-pricing-info pricing-top green-top">
-								<h3>Golden</h3>
-								<p>$<span>35</span>/month</p>
-							</div>
-							<div class="pricing-bottom">
-								<div class="pricing-bottom-bottom green-pricing-bottom-top">
-									<p><span class="fa fa-check"></span><span>Training</span> Overview</p>
-									<p><span class="fa fa-check"></span><span>Beginner </span> Classes</p>
-									<p><span class="fa fa-check"></span><span>Personal </span> Training</p>  
-									<p><span class="fa fa-times"></span><span>Olympic </span> weightlifting</p>
-									<p class="text"><span class="fa fa-times"></span><span>Foundation</span> Training</p>
-								</div>
-								<div class="buy-button">
-									<a class="popup-with-zoom-anim" href="#small-dialog">Buy Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="agileits-pricing-grid fourth">
-						<div class="pricing_grid">
-							<div class="wthree-pricing-info pricing-top yellow-top">
-								<h3>Professional</h3>
-								<p>$<span>50</span>/month</p>
-							</div>
-							<div class="pricing-bottom">
-								<div class="pricing-bottom-bottom yellow-pricing-bottom-top">
-									<p><span class="fa fa-check"></span><span>Training</span> Overview</p>
-									<p><span class="fa fa-check"></span><span>Beginner </span> Classes</p>
-									<p><span class="fa fa-check"></span><span>Personal </span> Training</p>  
-									<p><span class="fa fa-check"></span><span>Olympic </span> weightlifting</p>
-									<p class="text"><span class="fa fa-check"></span><span>Foundation</span> Training</p>
-								</div>
-								<div class="buy-button">
-									<a class="popup-with-zoom-anim" href="#small-dialog">Buy Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-                    -->
-                    
+                   
 				</div>
 			</div>
+    
+            <div class="ui  buttons "  style=" display: flex;
+                            justify-content:center;">
+                     <div id="tabledelete" style="margin-bottom:0.5rem;" class="ui  tiny  button">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div id="tabledelete" style="margin-bottom:0.5rem;" class="ui  tiny button">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+            </div>
+    <!--pusher-->
+    </div>
 			<!-- //pricing plans -->
 		<!--//main-->
 	<!--footer-->
@@ -260,6 +233,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- jquery -->
 	<script src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 	<!-- //jquery -->
 	
