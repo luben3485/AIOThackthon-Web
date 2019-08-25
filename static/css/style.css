@@ -577,6 +577,20 @@ button::-moz-focus-inner {
     letter-spacing: 2px;
 	font-family: 'Raleway', sans-serif;
 }
+.btn{
+    outline: none;
+    padding: 0.9em 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 1em;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: #FF5722;
+    letter-spacing: 2px;
+	font-family: 'Raleway', sans-serif;
+}
 .signin-form input[type="submit"]:hover {
     color: #fff;
     background: #212121;
