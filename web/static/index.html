@@ -103,7 +103,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             justify-content: center;">
                                 
                                 <button class="ui blue  small button">
-                                     <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#small-dialog">Edit</a>
+                                     <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#edit-cushion">Edit</a>
                                 </button>
                                 <button class="ui green small button">
                                     <i class="chart pie icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#show-cushion">Show</a>
@@ -242,7 +242,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="signin-form profile">
 				<h3>Edit</h3>
 				<div class="login-form">
-					<form action="#" method="post" class="form">
+					<form action="#" method="post" >
 						<input type="text" name="deviceId" placeholder="Device name" required="" value="iot-7531">
                         <input type="text" name="sensorId" placeholder="Device name" required="" value="68888">
                         <input type="text" name="key" placeholder="Device name" required="" value="ERG7-SDF5-65FS-9S5F">
@@ -259,16 +259,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>						
 	<!--pop-up-grid-->
     <div id="popup">
+		<div id="edit-cushion" class="mfp-hide">
+			<div class="signin-form profile">
+				<h3>Edit</h3>
+				<div class="login-form">
+					<form action="#" method="post">
+						<input type="text" name="cushion-deviceId" placeholder="Device name" required="" value="18341781264">
+                        <input type="text" name="cushion-sensorId" placeholder="Device name" required="" value="sensor_1">
+                        <input type="text" name="cushion-key" placeholder="Device name" required="" value="PKKP7XVFSLCDV1JBV7">
+						<input type="text" name="cushion-url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
+                        <div class="ui toggle checkbox" >
+                          <input type="checkbox" name="check" id="check">
+                          <label class="coloring red" style="color:black">Always remind me</label>
+                        </div>
+                        <div class="btn" id="save">Save</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>				
+    
+    
+    <div id="popup">
 		<div id="show-cushion" class="mfp-hide">
 			<div class="signin-form profile">
 				<h3>SMART CUSHION</h3>
 				<div class="login-form">
-					<form action="#" method="post" class="form">
+					<form action="#" method="post">
                         <label style="color:black">Your Posture</label>
                         <h1 style="font-size:2rem;font-family:sans-serif;" id="postrue-title">駝背前傾</h1>
                         <img src="images/posture/1.jpg">
                         <div class="btn" id="exercise">Exercise</div>
-                        <input type="submit" value="Close">
 					</form>
 				</div>
 			</div>
@@ -280,11 +301,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="signin-form profile">
 				<h3>LIGHT BULB</h3>
 				<div class="login-form">
-					<form action="#" method="post" class="form">
+					<form action="#" method="post" >
                           <label style="color:black">Power</label>
                         <h1 style="font-size:2rem;font-family:sans-serif;" id="lightbulb-title">OFF</h1>
                         <img id="lightbulb-img" src="images/lightbulb/close.jpg" height="300">
-                        <input type="submit" value="Close">
 					</form>
 				</div>
 			</div>
@@ -296,15 +316,72 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="signin-form profile">
 				<h3>DOOR BELL</h3>
 				<div class="login-form">
-					<form action="#" method="post" class="form">
+					<form action="#" method="post" >
                         <label style="color:black">Status</label>
                         <h1 style="font-size:4rem;font-family:sans-serif;" id="postrue-title">NO ONE</h1>
-                        <input type="submit" value="Close">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>	
+    
+    
+    
+    
+    <div class="ui cushion modal">
+      <i class="close icon"></i>
+      <div class="header">
+        HEALTH WARNING
+      </div>
+      <div class="image content">
+          <label style="color:black">Your Posture</label>
+            <h1 style="font-size:2rem;font-family:sans-serif;" id="postrue-title">駝背前傾</h1>
+        <div class="ui medium image">         
+            <img src="images/posture/1.jpg">
+                        
+        </div>
+        <div class="description">
+
+           
+            <div class="ui header">It seems that your posture is not so good.</div>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui red deny button">
+          Close
+        </div>
+        <div class="ui positive right  button">
+          Exercise
+        </div>
+      </div>
+    </div>
+
+     <div class="ui doorbell modal">
+      <i class="close icon"></i>
+      <div class="header">
+        ANNOUNCEMENT
+      </div>
+      <div class="image content">
+        <div class="ui header">The task has finished.</div>
+        <div class="ui medium image">         
+            <img src="images/posture/1.jpg">
+                        
+        </div>
+        <div class="description">
+
+           
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui red deny button">
+          Close
+        </div>
+       
+      </div>
+    </div>
+
+    
+    
 	<!-- jquery -->
 	<script src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
