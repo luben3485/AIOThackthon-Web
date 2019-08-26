@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM owasp/zap2docker-stable:latest
 MAINTAINER Ben Lu
 USER root
 
