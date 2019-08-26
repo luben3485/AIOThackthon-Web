@@ -3,6 +3,6 @@ applications:
 - name: iot
   memory: 1024M
   instances: 1
-  disk_quota: 1G
+  disk_quota: 4G
   docker:
     image: luben3485/iot:latest

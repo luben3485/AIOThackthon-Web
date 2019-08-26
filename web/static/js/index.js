@@ -24,10 +24,10 @@ $(document).ready(function(){
     ;
     
     $('#exercise').click(function(){
-        alert('fuck');
+        window.location.href="posture.html";
 
     });
-    $('#save').click(function(){
+    $('#save-cushion').click(function(){
        
         var deviceId = $('input[name="cushion-deviceId"]').val();
         var sensorId = $('input[name="cushion-sensorId"]').val();
@@ -51,17 +51,26 @@ $(document).ready(function(){
             //console.log("receive data..." + received_msg);
             var value = JSON.parse(received_msg).value[0]
             console.log(value)
-            if(value == '20090'){
+            if(value == '8787'){
                 
-                //這裡要修改show 的圖案與文字
-                
+                $('.postrue-title').text('攤背坐姿');
+                $('.posture-img').attr('src', 'images/posture/3.jpeg');
                 if(cushionremind == true){
-                    //這邊要改modal的圖案文字
                     $('.ui.cushion.modal')
                         .modal('show')
                     ;
                 }
-            }   
+            }else if(value == '20090'){
+                  $('.postrue-title').text('駝背坐姿');
+                $('.posture-img').attr('src', 'images/posture/1.jpg');
+                if(cushionremind == true){
+                    $('.ui.cushion.modal')
+                        .modal('show')
+                    ;
+                }
+                
+                
+            }
              
         };
         

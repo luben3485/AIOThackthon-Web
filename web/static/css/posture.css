@@ -27,35 +27,84 @@ nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
-.ui.modal > .modalheader{
+.btn{
+    outline: none;
+    padding: 0.9em 0;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: coral !important;
+    letter-spacing: 2px;
+	font-family: 'Raleway', sans-serif;
+    width:30%;
+    border-radius:10px;
+    /*
+    margin-top:18rem;
+    margin-bottom: 0;
+    margin-left:auto;
+    margin-right:auto;
+    */
+    position:absolute;
+    top:50%;
+    left:35%;
+    
+}
+#counter{
+    padding-top:2.5rem;
+    font-size:20rem;
+    font-family:sans-serif;
+    text-align: center;
+    color:coral;
+    display:none;
+}
+#title{
+    font-size:3rem;
+    font-family:sans-serif;
+    text-align: center;
+    display:none;
+}
+#main{
+    margin:2rem auto;
+    background-color:white;
+    background: url("../images/posture/gym.jpg")  0px 0px;
+    height:80vh;
+    width:80vw;
+    border-radius:4px;
+    font-family: 'Raleway', sans-serif;
+
+    
+    
+}
+#msg{
+    padding-top:3rem;
+    display:none;
+    font-size:3rem;
+    text-align: center;
+    
+}
+#score{
+    padding-top:3rem;
+    font-size:15rem;
+    text-align: center;
+    display:none;
+}
+#exereise-img{
+    padding-top:5rem;
+     height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+.header{
   background-color:coral !important;
   font-size:1.5rem;
-  padding:1rem;
-  font-family: 'Raleway', sans-serif;
-}
-.ui.modal > .actions{
-  background-color:white !important;
-  padding:1rem;
-  font-family: 'Raleway', sans-serif;
-}
-.ui.modal > .image.content{
-  background-color:white !important;
-  padding:1rem;
-  font-family: 'Raleway', sans-serif;
+  padding:0.7rem;
+  text-align: center;
+  color:white;
+ 
 }
 
-.ui.sidebar.inverted.vertical.menu{
-    
-
-}
-.ui.toggle.checkbox{
-    margin: 0.6rem 1rem;
-}
-
-.ui.toggle.checkbox input:checked ~ .box:before,
-.ui.toggle.checkbox input:checked ~ .coloring.red:before {
-background: #FF5722 !important;
-}
 
 body.pushable>.pusher {
   font-family: 'Raleway', sans-serif;
@@ -593,20 +642,7 @@ button::-moz-focus-inner {
     letter-spacing: 2px;
 	font-family: 'Raleway', sans-serif;
 }
-.btn{
-    outline: none;
-    padding: 0.9em 0;
-    width: 100%;
-    text-align: center;
-    font-size: 1em;
-    margin-top: 1em;
-    border: none;
-    color: #FFFFFF;
-    cursor: pointer;
-    background: #FF5722;
-    letter-spacing: 2px;
-	font-family: 'Raleway', sans-serif;
-}
+
 .signin-form input[type="submit"]:hover {
     color: #fff;
     background: #212121;

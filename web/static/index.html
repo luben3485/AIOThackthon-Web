@@ -35,7 +35,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //css files -->
     <link href="css/font-awesome-all.css" rel="stylesheet" type="text/css" >
 	<!-- web-fonts -->
+    <!--
 	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+-->
 	<!-- //web-fonts -->
     
 
@@ -144,7 +146,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             justify-content: center;">
                                 
                                 <button class="ui blue  small button">
-                                    <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#small-dialog">Edit</a>
+                                    <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#edit-lightbulb">Edit</a>
                                     
                                 </button>
                                 <button class="ui green small button">
@@ -174,7 +176,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             justify-content: center;">
                                 
                                 <button class="ui blue  small button">
-                                    <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#small-dialog">Edit</a>
+                                    <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#edit-doorbell">Edit</a>
                                     
                                 </button>
                                 <button class="ui green small button">
@@ -238,7 +240,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 	<!--pop-up-grid-->
 	<div id="popup">
-		<div id="small-dialog" class="mfp-hide">
+		<div id="edit-lightbulb" class="mfp-hide">
+			<div class="signin-form profile">
+				<h3>Edit</h3>
+				<div class="login-form">
+					<form action="#" method="post" >
+						<input type="text" name="deviceId" placeholder="Device name" required="" value="iot-8787">
+                        <input type="text" name="sensorId" placeholder="Device name" required="" value="68888">
+                        <input type="text" name="key" placeholder="Device name" required="" value="ERG7-SDF5-65FS-9S5F">
+						<input type="text" name="url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
+                        <div class="ui toggle checkbox">
+                          <input type="checkbox" name="public" checked>
+                          <label class="coloring red" style="color:black">Always remind me</label>
+                        </div>
+                        <div class="btn" id="save-lightbulb">Save</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
+    
+    <div id="popup">
+		<div id="edit-doorbell" class="mfp-hide">
 			<div class="signin-form profile">
 				<h3>Edit</h3>
 				<div class="login-form">
@@ -248,15 +271,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <input type="text" name="key" placeholder="Device name" required="" value="ERG7-SDF5-65FS-9S5F">
 						<input type="text" name="url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
                         <div class="ui toggle checkbox">
-                          <input type="checkbox" name="public">
+                          <input type="checkbox" name="public" checked>
                           <label class="coloring red" style="color:black">Always remind me</label>
                         </div>
-                        <input type="submit" value="Save">
+                        <div class="btn" id="save-doorbell">Save</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>						
+	</div>					
+
+    
+    
 	<!--pop-up-grid-->
     <div id="popup">
 		<div id="edit-cushion" class="mfp-hide">
@@ -269,10 +295,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <input type="text" name="cushion-key" placeholder="Device name" required="" value="PKKP7XVFSLCDV1JBV7">
 						<input type="text" name="cushion-url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
                         <div class="ui toggle checkbox" >
-                          <input type="checkbox" name="check" id="check">
+                          <input type="checkbox" name="check" id="check" checked>
                           <label class="coloring red" style="color:black">Always remind me</label>
                         </div>
-                        <div class="btn" id="save">Save</div>
+                        <div class="btn" id="save-cushion">Save</div>
 					</form>
 				</div>
 			</div>
@@ -287,8 +313,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="login-form">
 					<form action="#" method="post">
                         <label style="color:black">Your Posture</label>
-                        <h1 style="font-size:2rem;font-family:sans-serif;" id="postrue-title">駝背前傾</h1>
-                        <img src="images/posture/1.jpg">
+                        <h1 style="font-size:2rem;font-family:sans-serif;" class="postrue-title">駝背前傾</h1>
+                        <img class="posture-img" src="images/posture/1.jpg" >
                         <div class="btn" id="exercise">Exercise</div>
 					</form>
 				</div>
@@ -330,14 +356,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     
     <div class="ui cushion modal">
       <i class="close icon"></i>
-      <div class="header">
+      <div class="modalheader">
         HEALTH WARNING
       </div>
       <div class="image content">
           <label style="color:black">Your Posture</label>
-            <h1 style="font-size:2rem;font-family:sans-serif;" id="postrue-title">駝背前傾</h1>
+            <h1 style="font-size:2rem;font-family:sans-serif;" class="postrue-title">駝背前傾</h1>
         <div class="ui medium image">         
-            <img src="images/posture/1.jpg">
+            <img src="images/posture/1.jpg" class="posture-img">
                         
         </div>
         <div class="description">
@@ -358,7 +384,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
      <div class="ui doorbell modal">
       <i class="close icon"></i>
-      <div class="header">
+      <div class="modalheader">
         ANNOUNCEMENT
       </div>
       <div class="image content">
