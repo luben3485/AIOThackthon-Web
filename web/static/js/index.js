@@ -147,7 +147,7 @@ $(document).ready(function(){
         var key = $('input[name="doorbell-key"]').val();
         var url = $('input[name="doorbell-url"]').val();
         var doorbellremind = $('#doorbell-check').prop("checked");
-        alert(deviceId +'\n' + sensorId + '\n' +key + '\n' + url + '\n' + doorbellremind );
+        //alert(deviceId +'\n' + sensorId + '\n' +key + '\n' + url + '\n' + doorbellremind );
         
         var ws = new WebSocket(url);
         console.log(ws);
