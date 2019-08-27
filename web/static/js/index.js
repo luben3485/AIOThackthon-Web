@@ -157,6 +157,7 @@ $(document).ready(function(){
                 }
                 }).done(function (res) {
                     console.log("/ajax ON success!")
+                    alert('on');
                 }).fail(function(){
                     console.log("/ajax ON fail!")
                 })
@@ -183,6 +184,7 @@ $(document).ready(function(){
                 }
                 }).done(function (res) {
                     console.log("/ajax OFF success!")
+                    alert('off');
                 }).fail(function(){
                     console.log("/ajax OFF fail!")
                 })
