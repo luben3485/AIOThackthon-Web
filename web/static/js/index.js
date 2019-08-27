@@ -30,7 +30,23 @@ $(document).ready(function(){
         window.location.href="posture.html";
 
     });
-    
+    function showCushionModal(){
+          $('.ui.cushion.modal')
+                .modal({
+                    closable  : false,
+                    onDeny    : function(){
+         
+                    },
+                    onApprove : function() {
+                        window.location.href="posture.html";
+                        }
+                    })
+                .modal('show')
+                ;
+        
+        
+        
+    }
     
     //cushion edit
     $('#save-cushion').click(function(){
@@ -57,31 +73,63 @@ $(document).ready(function(){
             //console.log("receive data..." + received_msg);
             var value = JSON.parse(received_msg).value[0]
             console.log(value)
-            if(value == '8787'){
+            if(value == '0'){
                 
-                $('.postrue-title').text('攤背坐姿');
-                $('.posture-img').attr('src', 'images/posture/3.jpeg');
-                if(cushionremind == true){
-                    $('.ui.cushion.modal')
-                        .modal('show')
-                    ;
-                }
-            }else if(value == '20090'){
+                $('.postrue-title').text('正確坐姿');
+                $('.posture-img').attr('src', 'images/posture/0.jpg');
+                
+            }else if(value == '1'){
                   $('.postrue-title').text('駝背坐姿');
                 $('.posture-img').attr('src', 'images/posture/1.jpg');
                 if(cushionremind == true){
-                    $('.ui.cushion.modal')
-                        .modal({
-                            closable  : false,
-                            onDeny    : function(){
-         
-                            },
-                            onApprove : function() {
-                                window.location.href="posture.html";
-                            }
-                          })
-                          .modal('show')
-                        ;
+                    showCushionModal();
+                }
+                
+                
+            }else if(value == '2'){
+                  $('.postrue-title').text('攤背坐姿');
+                $('.posture-img').attr('src', 'images/posture/2.png');
+                if(cushionremind == true){
+                    showCushionModal();
+                }
+                
+                
+            }else if(value == '3'){
+                  $('.postrue-title').text('翹右腳坐姿');
+                $('.posture-img').attr('src', 'images/posture/3.jpg');
+                if(cushionremind == true){
+                    showCushionModal();
+                }
+                
+                
+            }else if(value == '4'){
+                  $('.postrue-title').text('翹左腳坐姿');
+                $('.posture-img').attr('src', 'images/posture/4.png');
+                if(cushionremind == true){
+                    showCushionModal();
+                }
+                
+                
+            }else if(value == '5'){
+                  $('.postrue-title').text('三分之一板凳坐姿');
+                $('.posture-img').attr('src', 'images/posture/5.jpeg');
+                if(cushionremind == true){
+                    showCushionModal();
+                }
+                
+                
+            }else if(value == '6'){
+                  $('.postrue-title').text('偏右坐姿');
+                $('.posture-img').attr('src', 'images/posture/6.jpg');
+                if(cushionremind == true){
+                    showCushionModal();
+                }
+                
+            }else if(value == '7'){
+                  $('.postrue-title').text('偏左坐姿');
+                $('.posture-img').attr('src', 'images/posture/7.png');
+                if(cushionremind == true){
+                    showCushionModal();
                 }
                 
                 
