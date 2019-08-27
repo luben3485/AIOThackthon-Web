@@ -19,7 +19,7 @@ def set_cookie():
     return response		
 
 @app.route('/lightbulb')
-def /lightbulb():
+def lightbulb():
     power =request.cookies.get('power')
     send_sensor_data_to_platform(power)
     print(power)
