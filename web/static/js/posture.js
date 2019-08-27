@@ -20,10 +20,20 @@ $(document).ready(function(){
         $("#main").css('background', 0);
         $('#main').css('background-color','white');
         counter();
-        
-        
-
+       
     });
+    
+    $('#rebtn').click(function(){
+        
+        //跟websocket連線
+        
+        $(this).css('display','none');
+        $("#main").css('background', 0);
+        $('#main').css('background-color','white');
+        counter();
+       
+    });
+    
     function delay(ms) {
 
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -78,10 +88,9 @@ $(document).ready(function(){
         $('#score').text('87');
         $('#score').css('display','block');
         $('#msg').css('display','block');
-        
-        
-        
+        $('#rebtn').css('display','block');    
     }
+    
     
     $('#lightbulb-img').click(function(){
         name = $(this).attr('src')

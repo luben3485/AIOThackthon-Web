@@ -31,6 +31,7 @@ $(document).ready(function(){
 
     });
     
+    
     //cushion edit
     $('#save-cushion').click(function(){
        
@@ -70,8 +71,17 @@ $(document).ready(function(){
                 $('.posture-img').attr('src', 'images/posture/1.jpg');
                 if(cushionremind == true){
                     $('.ui.cushion.modal')
-                        .modal('show')
-                    ;
+                        .modal({
+                            closable  : false,
+                            onDeny    : function(){
+         
+                            },
+                            onApprove : function() {
+                                window.location.href="posture.html";
+                            }
+                          })
+                          .modal('show')
+                        ;
                 }
                 
                 
