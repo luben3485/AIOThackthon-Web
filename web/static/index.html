@@ -163,12 +163,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                           <img src="images/doorbell.jpg">
                         </div>
                         <div class="content">
-                          <div class="header">Doorbell</div>
+                          <div class="header">Washing machine</div>
                           <div class="meta">
                             <a>notification IOT</a>
                           </div>
                           <div class="description">
-                           If someone rings the bell,we will remind you.
+                           Remind you if task has finished.
                           </div>
                         </div>
                         <div class="extra content">
@@ -245,10 +245,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h3>Edit</h3>
 				<div class="login-form">
 					<form action="#" method="post" >
-						<input type="text" name="deviceId" placeholder="Device name" required="" value="18351487392">
-                        <input type="text" name="sensorId" placeholder="Device name" required="" value="output">
-                        <input type="text" name="key" placeholder="Device name" required="" value="ERG7-SDF5-65FS-9S5F">
-						<input type="text" name="url" placeholder="Device URL" required="" value="http://iot.cht.com.tw:1883">
+						<input type="text" name="lightbulb-deviceId" placeholder="Device name" required="" value="18351487392">
+                        <input type="text" name="lightbulb-sensorId" placeholder="Device name" required="" value="output">
+                        <input type="text" name="lightbulb-key" placeholder="Device name" required="" value="PKKP7XVFSLCDV1JBV7">
+						<input type="text" name="lightbulb-url" placeholder="Device URL" required="" value="http://iot.cht.com.tw:1883">
                         <div class="ui toggle checkbox">
                           <input type="checkbox" name="public" checked>
                           <label class="coloring red" style="color:black">Always remind me</label>
@@ -266,9 +266,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h3>Edit</h3>
 				<div class="login-form">
 					<form action="#" method="post" >
-						<input type="text" name="doorbell-deviceId" placeholder="Device name" required="" value="18351487392">
+                        <input type="text" name="doorbell-deviceId" placeholder="Device name" required="" value="18351487392">
                         <input type="text" name="doorbell-sensorId" placeholder="Device name" required="" value="output">
-                        <input type="text" name="doorbell-key" placeholder="Device name" required="" value="PK2XX1EK0B3BAZASB0">
+                        <input type="text" name="doorbell-key" placeholder="Device name" required="" value="PKKP7XVFSLCDV1JBV7">
 						<input type="text" name="doorbell-url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
                         <div class="ui toggle checkbox">
                           <input type="checkbox" name="doorbell-check" id="doorbell-check" checked>
@@ -340,11 +340,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div id="popup">
 		<div id="show-doorbell" class="mfp-hide">
 			<div class="signin-form profile">
-				<h3>DOOR BELL</h3>
+				<h3 style="font-size:1.5rem;">Washing machine</h3>
 				<div class="login-form">
 					<form action="#" method="post" >
-                        <label style="color:black">Status</label>
-                        <h1 style="font-size:4rem;font-family:sans-serif;" id="postrue-title">NO ONE</h1>
+                        <label style="font-size:1.5rem;">Status</label>
+                        <h1 style="font-size:2rem;font-family:sans-serif;" id="doorbell-title">NOT FINISHED</h1>
+                        <img  id="washingmachine-img" src="images/svg/notfinished.svg" >
 					</form>
 				</div>
 			</div>
@@ -388,7 +389,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         ANNOUNCEMENT
       </div>
       <div class="image content">
-        <div class="ui header"><h1 style="font-size:2rem;">The task has finished. </h1><br>type: washmachine<br>deviceId:18351487392</div>
+        <div class="ui header"><h1 style="font-size:2rem;">The task has finished. </h1><br>type: washing machine<br>deviceId:18351487392</div>
         <div class="ui medium image">         
             <img src="images/doorbell/washmachine.jpg" width="295" height="410">
                         

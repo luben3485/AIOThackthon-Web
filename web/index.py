@@ -16,17 +16,13 @@ def set_cookie():
     response.set_cookie('id', "123")
     return response		
 
-@app.route('/t')
-def t():
-    t1 = threading.Thread(target=decrement)
-    t1.start()
-    return 'OK'
-@app.route('/g')
-def g():
-    global number
-    result = {'number':number}
-    return jsonify(result)
+@app.route('/lightbulb')
+def lightbulb():
+    power =request.cookies.get('power')
 
+
+    result = {'Result':'OK'}
+    return jsonify(result)
 
 
 @app.route('/get_cookie')  

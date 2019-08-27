@@ -89,7 +89,7 @@ $(document).ready(function(){
         var key = $('input[name="doorbell-key"]').val();
         var url = $('input[name="doorbell-url"]').val();
         var doorbellremind = $('#doorbell-check').prop("checked");
-        //alert(deviceId +'\n' + sensorId + '\n' +key + '\n' + url + '\n' + doorbellremind );
+        alert(deviceId +'\n' + sensorId + '\n' +key + '\n' + url + '\n' + doorbellremind );
         
         var ws = new WebSocket(url);
         console.log(ws);
@@ -106,14 +106,17 @@ $(document).ready(function(){
             //console.log("receive data..." + received_msg);
             var value = JSON.parse(received_msg).value[0]
             console.log(value);
-            if(value == 1 || value == 0){
-                
-                
+            if(value == 1){
+                $('#washingmachine-img').attr('src', 'images/svg/finished.svg');
+                $('#doorbell-title').text('FINISHED');
                 if(doorbellremind == true){
                     $('.ui.doorbell.modal')
                             .modal('show')
                         ;
                 }
+            }else{
+                $('#washingmachine-img').attr('src', 'images/svg/notfinished.svg');
+                $('#doorbell-title').text('NOT FINISHED');
             }
                 
         };
@@ -137,11 +140,52 @@ $(document).ready(function(){
             $(this).attr('src', 'images/lightbulb/light.jpg');
             $(this).attr('height', '300');
             $('#lightbulb-title').text('ON');
+ 
+            $.ajax({
+                url:'https://iot.cht.com.tw/iot/v1',
+                method: 'POST',
+                cache: false, 
+                headers: {
+                    "Content-Type": "application/json",
+                    'Access-Control-Allow-Origin': '*',
+                    'CK':'PKBJ3AAWY7IRBMUKAH',
+                    'device_id':'18351487392'
+                },
+                data:{
+                    'id':'input',
+                    'value':["1"]
+                }
+                }).done(function (res) {
+                    console.log("/ajax ON success!")
+                }).fail(function(){
+                    console.log("/ajax ON fail!")
+                })
+
         }
         else if(name == 'images/lightbulb/light.jpg'){
             $(this).attr('src', 'images/lightbulb/close.jpg');
             $(this).attr('height', '300');
             $('#lightbulb-title').text('OFF');
+        
+            $.ajax({
+                url:'https://iot.cht.com.tw/iot/v1',
+                method: 'POST',
+                cache: false, 
+                headers: {
+                    "Content-Type": "application/json",
+                    'Access-Control-Allow-Origin': '*',
+                    'CK':'PKBJ3AAWY7IRBMUKAH',
+                    'device_id':'18351487392'
+                },
+                data:{
+                    'id':'input',
+                    'value':["0"]
+                }
+                }).done(function (res) {
+                    console.log("/ajax OFF success!")
+                }).fail(function(){
+                    console.log("/ajax OFF fail!")
+                })
         }
 
     });
