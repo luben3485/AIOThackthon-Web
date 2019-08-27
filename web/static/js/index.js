@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var cushionremind = false;
+    var doorbellremind = false;
     var TOPIC;
     var client = false;
     
@@ -88,8 +89,7 @@ $(document).ready(function(){
         var key = $('input[name="doorbell-key"]').val();
         var url = $('input[name="doorbell-url"]').val();
         var doorbellremind = $('#doorbell-check').prop("checked");
-        TOPIC = '/v1/device/'+ deviceId +'/sensor/' + sensorId+ '/rawdata';
-        alert(deviceId +'\n' + sensorId + '\n' +key + '\n' + url + '\n' + doorbellremind +'\n' +TOPIC);
+        //alert(deviceId +'\n' + sensorId + '\n' +key + '\n' + url + '\n' + doorbellremind );
         
         var ws = new WebSocket(url);
         console.log(ws);
@@ -107,9 +107,13 @@ $(document).ready(function(){
             var value = JSON.parse(received_msg).value[0]
             console.log(value);
             if(value == 1 || value == 0){
-                $('.ui.doorbell.modal')
-                        .modal('show')
-                    ;
+                
+                
+                if(doorbellremind == true){
+                    $('.ui.doorbell.modal')
+                            .modal('show')
+                        ;
+                }
             }
                 
         };
