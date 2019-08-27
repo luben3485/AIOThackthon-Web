@@ -119,15 +119,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="ui cards agileits-pricing-grid"  style="width:18rem">
                       <div class="card"  style="width:18rem">
                         <div class="image">
-                          <img src="images/wh2.jpg">
+                          <img src="images/data.jpg">
                         </div>
                         <div class="content">
-                          <div class="header">Data</div>
+                          <div class="header">Posture data</div>
                           <div class="meta">
-                            <a>smart AIOT</a>
+                            <a>Data analysis</a>
                           </div>
-                          <div class="description">
-                            A smart chair cushion. It can detect your bad posture and remind you.
+                          <div class="description" id="data-title">
+                            Bad posture mostly is : 駝背坐姿
                           </div>
                         </div>
                         <div class="extra content">
@@ -138,7 +138,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                      <i class="edit icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#edit-cushion">Edit</a>
                                 </button>
                                 <button class="ui green small button">
-                                    <i class="chart pie icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#show-cushion">Show</a>
+                                    <i class="chart pie icon"></i><a class="popup-with-zoom-anim" style="color:white;" href="#show-data">Show</a>
                                 </button>
                             </div>
                             
@@ -313,8 +313,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h3>Edit</h3>
 				<div class="login-form">
 					<form action="#" method="post">
-						<input type="text" name="cushion-deviceId" placeholder="Device name" required="" value="18341781264">
-                        <input type="text" name="cushion-sensorId" placeholder="Device name" required="" value="sensor_1">
+						<input type="text" name="cushion-deviceId" placeholder="Device name" required="" value="18359721596">
+                        <input type="text" name="cushion-sensorId" placeholder="Device name" required="" value="prediction">
                         <input type="text" name="cushion-key" placeholder="Device name" required="" value="PKKP7XVFSLCDV1JBV7">
 						<input type="text" name="cushion-url" placeholder="Device URL" required="" value="ws://iot.cht.com.tw:80/iot/ws/rawdata">
                         <div class="ui toggle checkbox" >
@@ -344,6 +344,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 	</div>		
+    
+    
+    <div id="popup">
+		<div id="show-data" class="mfp-hide">
+			<div class="signin-form profile">
+				<h3 style="font-size:1.5rem;">Posture frequency</h3>
+				<div class="login-form">
+					<form action="#" method="post" >
+                        <label style="font-size:1.5rem;">Bad posture mostly is : 駝背坐姿</label>
+                        <img src="images/chart/chart.png">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
     
     <div id="popup">
 		<div id="show-lightbulb" class="mfp-hide">
@@ -385,7 +400,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
       <div class="image content">
           <label style="color:black">Your Posture</label>
-            <h1 style="font-size:2rem;font-family:sans-serif;" class="postrue-title">駝背前傾</h1>
+            <h1 style="font-size:2rem;font-family:sans-serif;" class="postrue-title">駝背坐姿</h1>
         <div class="ui medium image">         
             <img src="images/posture/1.jpg" class="posture-img">
                         
