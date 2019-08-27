@@ -30,6 +30,8 @@ $(document).ready(function(){
         $(this).css('display','none');
         $("#main").css('background', 0);
         $('#main').css('background-color','white');
+        $('#score').css('display','none');
+        $('#msg').css('display','none');
         counter();
        
     });
