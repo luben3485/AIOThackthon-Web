@@ -18,15 +18,19 @@ def set_cookie():
     response.set_cookie('id', "123")
     return response		
 
-@app.route('/lightbulb')
-def lightbulb():
-    power =request.cookies.get('power')
-    send_sensor_data_to_platform(power)
-    print(power)
+@app.route('/on')
+def on():
+    send_sensor_data_to_platform(1)
 
     result = {'Result':'OK'}
     return jsonify(result)
 
+@app.route('/off')
+def off():
+    send_sensor_data_to_platform(0)
+
+    result = {'Result':'OK'}
+    return jsonify(result)
 
 @app.route('/get_cookie')  
 def get_cookie():  

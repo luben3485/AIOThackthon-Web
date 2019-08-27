@@ -142,15 +142,11 @@ $(document).ready(function(){
             $('#lightbulb-title').text('ON');
  
             $.ajax({
-                url:'/lightbulb',
+                url:'/on',
                 method: 'GET',
-                cache: false, 
-                data:{
-                    'power':'1',
-                }
+                cache: false
                 }).done(function (res) {
                     console.log("/ajax OFF success!")
-                    alert('off');
                 }).fail(function(){
                     console.log("/ajax OFF fail!")
                 })
@@ -162,15 +158,11 @@ $(document).ready(function(){
             $('#lightbulb-title').text('OFF');
         
             $.ajax({
-                url:'/lightbulb',
+                url:'/off',
                 method: 'GET',
-                cache: false, 
-                data:{
-                    'power':'0',
-                }
+                cache: false,
                 }).done(function (res) {
                     console.log("/ajax OFF success!")
-                    alert('off');
                 }).fail(function(){
                     console.log("/ajax OFF fail!")
                 })
