@@ -142,24 +142,17 @@ $(document).ready(function(){
             $('#lightbulb-title').text('ON');
  
             $.ajax({
-                url:'https://iot.cht.com.tw/iot/v1',
-                method: 'POST',
+                url:'/lightbulb',
+                method: 'GET',
                 cache: false, 
-                headers: {
-                    "Content-Type": "application/json",
-                    'Access-Control-Allow-Origin': '*',
-                    'CK':'PKBJ3AAWY7IRBMUKAH',
-                    'device_id':'18351487392'
-                },
                 data:{
-                    'id':'input',
-                    'value':["1"]
+                    'power':'1',
                 }
                 }).done(function (res) {
-                    console.log("/ajax ON success!")
-                    alert('on');
+                    console.log("/ajax OFF success!")
+                    alert('off');
                 }).fail(function(){
-                    console.log("/ajax ON fail!")
+                    console.log("/ajax OFF fail!")
                 })
 
         }
@@ -169,18 +162,11 @@ $(document).ready(function(){
             $('#lightbulb-title').text('OFF');
         
             $.ajax({
-                url:'https://iot.cht.com.tw/iot/v1',
-                method: 'POST',
+                url:'/lightbulb',
+                method: 'GET',
                 cache: false, 
-                headers: {
-                    "Content-Type": "application/json",
-                    'Access-Control-Allow-Origin': '*',
-                    'CK':'PKBJ3AAWY7IRBMUKAH',
-                    'device_id':'18351487392'
-                },
                 data:{
-                    'id':'input',
-                    'value':["0"]
+                    'power':'0',
                 }
                 }).done(function (res) {
                     console.log("/ajax OFF success!")
