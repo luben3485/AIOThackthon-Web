@@ -60,6 +60,7 @@ $(document).ready(function(){
         });
     }
     function showimg(){
+        $('#exereise-img').css('display','block');
         $('#exereise-img').attr('src', 'images/posture/1.jpg');
         $('#title').text('請用力駝背');
         $('#title').css('display','block');
